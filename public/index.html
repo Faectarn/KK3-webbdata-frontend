@@ -1,0 +1,42 @@
+
+	<!DOCTYPE html>
+	<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script src="js/rooms.js" defer></script>
+		<title>ChatApp</title>
+	</head>
+
+	<body>
+		<div class="join-container">
+			<header class="join-header">
+				<h1>Andreas ChatApp</h1>
+			</header>
+			<main class="join-main">
+				<form action="chat.html">
+					<div class="form-control">
+						<label for="username">Vad heter du?</label>
+						<input type="text" name="username" id="username" placeholder="Ange användarnamn..." required />
+					</div>
+					<div class="form-control">
+						<label for="room">Välj rum</label>
+						<select name="room" id="roomList">
+						</select>
+					</div>
+					<button type="submit" class="btn">Gå med i rum</button>
+				</form>
+				<button id="delete-btn">Ta bort valt rum</button>
+				<form>
+					<label for="create-room">Skapa ett nytt rum</label>
+					<input type="text" name="room" id="new-room" placeholder="Ange namn på rum" />
+					<button id="create-btn">Lägg till</button>
+				</form>
+			</main>
+		</div>
+	</body>
+
+	</html>
