@@ -12,14 +12,14 @@ function populateRoomList(rooms) {
 }
 
 function getRooms() {
-    fetch("http://localhost:4000/rooms")
+    fetch("https://faectarn-chat-backend.herokuapp.com/rooms")
         .then(response => response.json())
         .then(data => populateRoomList(data));
 }
 
 async function addRoom(name) {
     console.log(name)
-    await fetch(`http://localhost:4000/rooms/${name}`, {
+    await fetch(`https://faectarn-chat-backend.herokuapp.com/rooms/${name}`, {
         method: "POST"
     })
     console.log(`Room ${name} created`)
@@ -27,7 +27,7 @@ async function addRoom(name) {
 }
 
 async function deleteRoom(name) {
-    await fetch(`http://localhost:4000/rooms/${name}`, {
+    await fetch(`https://faectarn-chat-backend.herokuapp.com/rooms/${name}`, {
         method: "DELETE"
     })
     getRooms();

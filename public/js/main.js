@@ -7,7 +7,7 @@ const { username, room } = Qs.parse(location.search, {
   ignoreQueryPrefix: true,
 });
 
-const socket = io.connect(':4000');
+const socket = io.connect('https://faectarn-chat-backend.herokuapp.com/');
 
 socket.emit('getRooms')
 
