@@ -1,1 +1,1 @@
-web: npx serve
+web: npm start
